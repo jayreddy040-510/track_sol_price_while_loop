@@ -9,8 +9,11 @@
 which jq curl awk echo bc say sleep
 ```
 ### run:
-run the following command with numbers for low and high to run script.
+run the following command from the root of this dir with numbers for low and high to run script.
 ```bash
 ./run.sh [low] [high]
 ```
-script will use `/bin/say` to say price out loud when you go below/above respective thresholds. if you get an API failure then you'll have to find another free API to get recent `$SOL` price and then unpack its return with `jq`.
+script will use `/bin/say` to say price out loud when you go below/above respective thresholds. 
+### troubleshoot:
+- if you get an API failure then you'll have to find another free API to get recent `$SOL` price and then unpack its return with `jq`.
+- if you get a `Permission denied` when trying to run the script then you dont have executable commands on your current unix/linux user, run `chmod +x run.sh` when in the root of the directory
